@@ -104,4 +104,5 @@ SET_DIRECTORY_PROPERTIES(PROPERTIES
   ADDITIONAL_MAKE_CLEAN_FILES ${CMAKE_BINARY_DIR}/console_bridge.pc)
 
 enable_testing()
-add_subdirectory(test)
+#Building tests might lead to issues and is not mandatory
+#add_subdirectory(test)
