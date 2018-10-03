@@ -7,7 +7,6 @@
   </description>
   <maintainer email="hsu@osrfoundation.org">John Hsu</maintainer>
   <maintainer email="isucan@willowgarage.com">Ioan Sucan</maintainer>
-
   <license>BSD</license>
 
   <author>Wim Meeussen</author>
@@ -17,10 +16,4 @@
   <url type="repository">https://github.com/ros/urdfdom</url>
 
   <buildtool_depend>catkin</buildtool_depend>
-
-  <run_depend>catkin</run_depend>
-  
-  <export>
-    <build_type>cmake</build_type>
-  </export>
 </package>
