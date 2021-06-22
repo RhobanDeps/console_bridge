@@ -1,16 +1,6 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.16.3)
 project(console_bridge)
 
-find_package(catkin REQUIRED)
-
-# What is published by the 'console_bridge package'
-catkin_package(
-  INCLUDE_DIRS src
-  LIBRARIES console_bridge
-)
-
-#Include sources directory
-include_directories(include)
 
 #Sources files
 set(SOURCES
@@ -24,3 +14,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -W -Wall")
 
 #Build Server and Client as shared library
 add_library(console_bridge SHARED ${SOURCES})
+#Include sources directory
+target_include_directories(console_bridge PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+)
